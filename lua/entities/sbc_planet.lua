@@ -5,7 +5,6 @@ ENT.Base 			= "base_gmodentity"
 ENT.PrintName		= "SBC Planet"
 ENT.Author			= "Ludsoe"
 ENT.Category		= "Other"
-
 ENT.Spawnable		= false
 
 if(SERVER)then
@@ -97,11 +96,11 @@ if(SERVER)then
 
 	function ENT:Check()
 		//local start = SysTime()
-		local radius = self.radius
+		local rsquared = self.radius*self.radius
 		for k,ent in pairs(self.Entities) do
 			if IsValid(ent)then
 				if IsValid(ent:GetPhysicsObject()) then
-					if ent:GetPos():Distance(self:GetPos()) <= radius then
+					if ent:GetPos():DistToSqr(self:GetPos()) <= rsquared then
 						local Grav,Press = self.gravity,self.pressure
 						
 						if ent.NoGrav then Grav = 0 end
