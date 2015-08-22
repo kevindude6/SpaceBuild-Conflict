@@ -1,0 +1,13 @@
+{
+	"title"		:	"SpaceBuild-Conflict",
+	"type"		:	"gamemode",
+	"tags"		:	[ "fun", "build" ],
+	"ignore"	:
+	[
+		"*.psd",
+		"*.vcproj",
+		"*.git*",
+		"*.lde*",
+		"*.txt*"
+	]
+}
