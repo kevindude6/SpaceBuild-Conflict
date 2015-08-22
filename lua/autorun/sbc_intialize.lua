@@ -42,14 +42,14 @@ function SBC.LoadFile(Path,Mode) --Easy way of loading files.
 end
 local LoadFile = SBC.LoadFile --Lel Speed.
 
-LoadFile("envx/variables.lua",1)
+LoadFile("sbc/variables.lua",1)
 
-LoadFile("envx/utilities/sh_debug.lua",1)
-LoadFile("envx/utilities/sh_utility.lua",1)
-LoadFile("envx/utilities/sh_networking.lua",1)
-LoadFile("envx/utilities/sh_datamanagement.lua",1)
+LoadFile("sbc/utilities/sh_debug.lua",1)
+LoadFile("sbc/utilities/sh_utility.lua",1)
+LoadFile("sbc/utilities/sh_networking.lua",1)
+LoadFile("sbc/utilities/sh_datamanagement.lua",1)
 
-LoadFile("envx/sbc_spaceengine.lua",2)
+LoadFile("sbc/sbc_spaceengine.lua",2)
 
 
 if(SERVER)then

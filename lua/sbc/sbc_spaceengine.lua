@@ -45,9 +45,9 @@ function SBC.CreateSBCFromMap()
 	end
 	Stars = {}
 	for k,v in pairs(rawstars) do
-		local star = SBC.ParseStar(v)
-		SBC.CreateStar(star)
-		table.insert(stars, star)
+	--	local star = SBC.ParseStar(v)
+	--	SBC.CreateStar(star)
+	--	table.insert(stars, star)
 	end
 	return rawdata, rawstars
 end
@@ -200,13 +200,13 @@ function SBC.CreatePlanet(d)
 		planet:Spawn()
 		planet:SetPos(d.position)
 		planet:Configure(d.radius, d.gravity, d.name, d)
-		planet:Create(d.gravity, d.atmosphere, d.pressure, d.temperature, d.air, d.name, d.total, d.originalco2per)
+		--planet:Create(d.gravity, d.atmosphere, d.pressure, d.temperature, d.air, d.name, d.total, d.originalco2per)
 	elseif d.typeof == "SB2" then
 		planet = ents.Create("sbc_planet")
 		planet:Spawn()
 		planet:SetPos(d.position)
 		planet:Configure(d.radius, d.gravity, d.name, d)
-		planet:Create(d.gravity, d.atmosphere, d.pressure, d.temperature, d.air, d.name, d.total, d.originalco2per)
+		--planet:Create(d.gravity, d.atmosphere, d.pressure, d.temperature, d.air, d.name, d.total, d.originalco2per)
 	else
 		if d.typeof then
 			print("NOT A VALID TYPE: "..d.typeof)
